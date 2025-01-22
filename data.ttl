@@ -1,0 +1,203 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Recipe: Spaghetti
+:SpaghettiTomatoSauce rdf:type :Recipe ;
+                      :hasIngredient :Spaghetti, :TomatoSauce, :OliveOil ;
+                      rdfs:label "Spaghetti with Tomato Sauce" ;
+                      :belongsToCategory :Vegetarian ;
+                      :belongsToCuisine :Italian ;
+                      :preparationTime "15"^^xsd:integer ;
+                      :cookingTime "20"^^xsd:integer ;
+                      :isSuitableForDiet :VegetarianDiet .
+
+# Recipe: Salad
+:VegetableSalad rdf:type :Recipe ;
+                :hasIngredient :Lettuce, :Tomato, :Cucumber, :OliveOil ;
+                rdfs:label "Vegetable Salad" ;
+                :belongsToCategory :Vegetarian ;
+                :belongsToCuisine :Mediterranean ;
+                :preparationTime "10"^^xsd:integer ;
+                :cookingTime "0"^^xsd:integer ;
+                :isSuitableForDiet :VegetarianDiet .           
+
+# Recipe: Chicken Salad
+:ChickenSalad rdf:type :Recipe ;
+             rdfs:label "Chicken Salad" ;
+             :hasIngredient :Chicken, :Lettuce, :Tomato, :OliveOil ;
+             :belongsToCategory :Healthy ;
+             :belongsToCuisine :Mediterranean ;
+             :preparationTime "10"^^xsd:integer ;
+             :cookingTime "10"^^xsd:integer .
+
+# Recipe: Veggie Burger
+:VeggieBurger rdf:type :Recipe ;
+              rdfs:label "Veggie Burger" ;
+              :hasIngredient :Lettuce, :Tomato, :Cucumber, :VeggiePatty ;
+              :belongsToCategory :Vegetarian ;
+              :belongsToCuisine :American ;
+              :preparationTime "15"^^xsd:integer ;
+              :cookingTime "10"^^xsd:integer .
+
+# Recipe: Beef Stew
+:BeefStew rdf:type :Recipe ;
+          rdfs:label "Beef Stew" ;
+          :hasIngredient :Beef, :Carrot, :Potato, :Onion ;
+          :belongsToCategory :NonVegetarian ;
+          :belongsToCuisine :American ;
+          :preparationTime "20"^^xsd:integer ;
+          :cookingTime "60"^^xsd:integer .
+          :isPreparedBy :ChefGordon .
+
+# Recipe: Pancakes
+:Pancakes rdf:type :Recipe ;
+          rdfs:label "Pancakes" ;
+          :hasIngredient :Flour, :Egg, :Milk, :Sugar ;
+          :belongsToCategory :Breakfast ;
+          :belongsToCuisine :American ;
+          :preparationTime "10"^^xsd:integer ;
+          :cookingTime "15"^^xsd:integer .
+
+# Recipe: Grilled Salmon
+:GrilledSalmon rdf:type :Recipe ;
+               rdfs:label "Grilled Salmon" ;
+               :hasIngredient :Salmon, :Lemon, :OliveOil ;
+               :belongsToCategory :NonVegetarian ;
+               :belongsToCuisine :Mediterranean ;
+               :preparationTime "10"^^xsd:integer ;
+               :cookingTime "20"^^xsd:integer .
+
+# Recipe: Mushroom Soup
+:MushroomSoup rdf:type :Recipe ;
+             rdfs:label "Mushroom Soup" ;
+             :hasIngredient :Mushroom, :Onion, :Garlic, :Cream ;
+             :belongsToCategory :Vegetarian ;
+             :belongsToCuisine :European ;
+             :preparationTime "15"^^xsd:integer ;
+             :cookingTime "30"^^xsd:integer .
+
+# Recipe: Shrimp Stir-Fry
+:ShrimpStirFry rdf:type :Recipe ;
+               rdfs:label "Shrimp Stir-Fry" ;
+               :hasIngredient :Shrimp, :BellPepper, :Onion, :SoySauce ;
+               :belongsToCategory :NonVegetarian ;
+               :belongsToCuisine :Chinese ;
+               :preparationTime "10"^^xsd:integer ;
+               :cookingTime "10"^^xsd:integer .
+
+# Ingredients
+:Spaghetti rdf:type :Ingredient ;
+           rdfs:label "Spaghetti" .
+
+:TomatoSauce rdf:type :Ingredient ;
+             rdfs:label "Tomato Sauce" .
+
+:OliveOil rdf:type :Ingredient ;
+          rdfs:label "Olive Oil" .
+
+:Lettuce rdf:type :Ingredient ;
+         rdfs:label "Lettuce" .
+
+:Tomato rdf:type :Ingredient ;
+        rdfs:label "Tomato" .
+
+:Cucumber rdf:type :Ingredient ;
+          rdfs:label "Cucumber" .
+
+:Beef rdf:type :Ingredient ;
+      rdfs:label "Beef" .
+
+:Carrot rdf:type :Ingredient ;
+        rdfs:label "Carrot" .
+
+:Potato rdf:type :Ingredient ;
+       rdfs:label "Potato" .
+
+:Onion rdf:type :Ingredient ;
+       rdfs:label "Onion" .
+
+:Flour rdf:type :Ingredient ;
+       rdfs:label "Flour" .
+
+:Egg rdf:type :Ingredient ;
+     rdfs:label "Egg" .
+
+:Milk rdf:type :Ingredient ;
+      rdfs:label "Milk" .
+
+:Sugar rdf:type :Ingredient ;
+       rdfs:label "Sugar" .
+
+:Salmon rdf:type :Ingredient ;
+        rdfs:label "Salmon" .
+
+:Lemon rdf:type :Ingredient ;
+       rdfs:label "Lemon" .
+
+:Mushroom rdf:type :Ingredient ;
+          rdfs:label "Mushroom" .
+
+:Garlic rdf:type :Ingredient ;
+        rdfs:label "Garlic" .
+
+:Cream rdf:type :Ingredient ;
+       rdfs:label "Cream" .
+
+:Shrimp rdf:type :Ingredient ;
+        rdfs:label "Shrimp" .
+
+:BellPepper rdf:type :Ingredient ;
+            rdfs:label "Bell Pepper" .
+
+:SoySauce rdf:type :Ingredient ;
+          rdfs:label "Soy Sauce" .
+
+# Categories
+:Vegetarian rdf:type :Category ;
+            rdfs:label "Vegetarian" .
+
+:NonVegetarian rdf:type :Category ;
+               rdfs:label "Non Vegetarian" .
+
+:Breakfast rdf:type :Category ;
+           rdfs:label "Breakfast" .
+
+:Healthy rdf:type :Category ;
+         rdfs:label "Healthy" .
+         
+
+# Cuisines
+:Italian rdf:type :Cuisine ;
+         rdfs:label "Italian" .
+
+:Mediterranean rdf:type :Cuisine ;
+               rdfs:label "Mediterranean" .
+
+:American rdf:type :Cuisine ;
+          rdfs:label "American" .
+
+:Chinese rdf:type :Cuisine ;
+         rdfs:label "Chinese" .
+
+:European rdf:type :Cuisine ;
+          rdfs:label "European" .
+
+# Cooking Methods
+:Grilling rdf:type :CookingMethod ;
+          rdfs:label "Grilling" .
+
+:Boiling rdf:type :CookingMethod ;
+         rdfs:label "Boiling" .
+
+# Chefs
+:ChefGordon rdf:type :Chef ;
+            rdfs:label "Chef Gordon" .
+
+:ChefDiet rdf:type :Chef ;
+          rdfs:label "Chef Diet" .
+
+# Diets
+:VegetarianDiet rdf:type :Diet ;
+                rdfs:label "Vegetarian Diet" .

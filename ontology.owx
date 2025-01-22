@@ -1,0 +1,249 @@
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2025/0/cooking#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2025/0/cooking#">
+    <Prefix name="" IRI="http://www.semanticweb.org/ontologies/2025/0/cooking#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    
+    <!-- Classes -->
+    <Declaration><Class IRI="Recipe"/></Declaration>
+    <Declaration><Class IRI="AppetizerRecipe"/></Declaration>
+    <Declaration><Class IRI="MainCourseRecipe"/></Declaration>
+    <Declaration><Class IRI="DessertRecipe"/></Declaration>
+    <Declaration><Class IRI="DrinkRecipe"/></Declaration>
+    <Declaration><Class IRI="Category"/></Declaration>
+    <Declaration><Class IRI="DietaryCategory"/></Declaration>
+    <Declaration><Class IRI="MealCategory"/></Declaration>
+    <Declaration><Class IRI="Ingredient"/></Declaration>
+    <Declaration><Class IRI="Vegetables"/></Declaration>
+    <Declaration><Class IRI="Proteins"/></Declaration>
+    <Declaration><Class IRI="Cuisine"/></Declaration>
+    <Declaration><Class IRI="Chef"/></Declaration>
+    <Declaration><Class IRI="CookingMethod"/></Declaration>
+
+    <!-- Object Properties -->
+    <Declaration><ObjectProperty IRI="hasIngredient"/></Declaration>
+    <Declaration><ObjectProperty IRI="belongsToCategory"/></Declaration>
+    <Declaration><ObjectProperty IRI="belongsToCuisine"/></Declaration>
+    <Declaration><ObjectProperty IRI="isPreparedBy"/></Declaration>
+    <Declaration><ObjectProperty IRI="requiresCookingMethod"/></Declaration>
+
+    <!-- Data Properties -->
+    <Declaration><DataProperty IRI="cookingTime"/></Declaration>
+    <Declaration><DataProperty IRI="preparationTime"/></Declaration>
+    <Declaration><DataProperty IRI="hasCalories"/></Declaration>
+    <Declaration><DataProperty IRI="hasDescription"/></Declaration>
+    <Declaration><DataProperty IRI="hasName"/></Declaration>
+
+    <!-- Subclasses -->
+    <SubClassOf><Class IRI="AppetizerRecipe"/><Class IRI="Recipe"/></SubClassOf>
+    <SubClassOf><Class IRI="MainCourseRecipe"/><Class IRI="Recipe"/></SubClassOf>
+    <SubClassOf><Class IRI="DessertRecipe"/><Class IRI="Recipe"/></SubClassOf>
+    <SubClassOf><Class IRI="DrinkRecipe"/><Class IRI="Recipe"/></SubClassOf>
+    <SubClassOf><Class IRI="DietaryCategory"/><Class IRI="Category"/></SubClassOf>
+    <SubClassOf><Class IRI="MealCategory"/><Class IRI="Category"/></SubClassOf>
+    <SubClassOf><Class IRI="Vegetables"/><Class IRI="Ingredient"/></SubClassOf>
+    <SubClassOf><Class IRI="Proteins"/><Class IRI="Ingredient"/></SubClassOf>
+
+    <!-- Individuals -->
+    <Declaration><NamedIndividual IRI="SpaghettiTomatoSauce"/></Declaration>
+    <Declaration><NamedIndividual IRI="VegetableSalad"/></Declaration>
+    <Declaration><NamedIndividual IRI="Tomato"/></Declaration>
+    <Declaration><NamedIndividual IRI="Lettuce"/></Declaration>
+    <Declaration><NamedIndividual IRI="OliveOil"/></Declaration>
+    <Declaration><NamedIndividual IRI="Vegetarian"/></Declaration>
+    <Declaration><NamedIndividual IRI="NonVegetarian"/></Declaration>
+    <Declaration><NamedIndividual IRI="ItalianCuisine"/></Declaration>
+    <Declaration><NamedIndividual IRI="MediterraneanCuisine"/></Declaration>
+    <Declaration><NamedIndividual IRI="ChefGordon"/></Declaration>
+    <Declaration><NamedIndividual IRI="Boiling"/></Declaration>
+    <Declaration><NamedIndividual IRI="Grilling"/></Declaration>
+
+    <!-- Object Property Assertions -->
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasIngredient"/>
+        <NamedIndividual IRI="SpaghettiTomatoSauce"/>
+        <NamedIndividual IRI="Tomato"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="belongsToCategory"/>
+        <NamedIndividual IRI="SpaghettiTomatoSauce"/>
+        <NamedIndividual IRI="Vegetarian"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="belongsToCuisine"/>
+        <NamedIndividual IRI="SpaghettiTomatoSauce"/>
+        <NamedIndividual IRI="ItalianCuisine"/>
+    </ObjectPropertyAssertion>
+
+    <!-- Data Property Assertions -->
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="SpaghettiTomatoSauce"/>
+        <Literal datatypeIRI="xsd:string">Spaghetti with Tomato Sauce</Literal>
+    </DataPropertyAssertion>
+
+    <!-- Object Property Assertions -->
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasIngredient"/>
+        <NamedIndividual IRI="SpaghettiTomatoSauce"/>
+        <NamedIndividual IRI="Tomato"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="belongsToCategory"/>
+        <NamedIndividual IRI="SpaghettiTomatoSauce"/>
+        <NamedIndividual IRI="Vegetarian"/>
+    </ObjectPropertyAssertion>
+
+    <!-- hasIngredient -->
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasIngredient"/>
+        <Class IRI="Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasIngredient"/>
+        <Class IRI="Ingredient"/>
+    </ObjectPropertyRange>
+
+    <!-- belongsToCategory -->
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="belongsToCategory"/>
+        <Class IRI="Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="belongsToCategory"/>
+        <Class IRI="Category"/>
+    </ObjectPropertyRange>
+
+    <!-- belongsToCuisine -->
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="belongsToCuisine"/>
+        <Class IRI="Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="belongsToCuisine"/>
+        <Class IRI="Cuisine"/>
+    </ObjectPropertyRange>
+
+    <!-- isPreparedBy -->
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isPreparedBy"/>
+        <Class IRI="Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isPreparedBy"/>
+        <Class IRI="Chef"/>
+    </ObjectPropertyRange>
+
+    <!-- requiresCookingMethod -->
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="requiresCookingMethod"/>
+        <Class IRI="Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="requiresCookingMethod"/>
+        <Class IRI="CookingMethod"/>
+    </ObjectPropertyRange>
+
+    <!-- cookingTime -->
+    <DataPropertyDomain>
+        <DataProperty IRI="cookingTime"/>
+        <Class IRI="Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="cookingTime"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+
+    <!-- preparationTime -->
+    <DataPropertyDomain>
+        <DataProperty IRI="preparationTime"/>
+        <Class IRI="Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="preparationTime"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+
+    <!-- hasCalories -->
+    <DataPropertyDomain>
+        <DataProperty IRI="hasCalories"/>
+        <Class IRI="Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="hasCalories"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+
+    <!-- hasDescription -->
+    <DataPropertyDomain>
+        <DataProperty IRI="hasDescription"/>
+        <Class IRI="Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+
+    <!-- creationDate -->
+    <DataPropertyDomain>
+        <DataProperty IRI="creationDate"/>
+        <Class IRI="Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="creationDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    
+    <!-- servingSize -->
+    <DataPropertyDomain>
+        <DataProperty IRI="servingSize"/>
+        <Class IRI="Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="servingSize"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+
+    <!-- hasName -->
+    <DataPropertyDomain>
+        <DataProperty IRI="hasName"/>
+        <Class IRI="Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasName"/>
+        <Class IRI="Ingredient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasName"/>
+        <Class IRI="Category"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasName"/>
+        <Class IRI="Chef"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+
+
+</Ontology>
+
+
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

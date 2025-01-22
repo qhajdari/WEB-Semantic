@@ -1,0 +1,24 @@
+@base <http://library.edu/> .	
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .	
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .	
+@prefix bf: <http://id.loc.gov/ontologies/bibframe.rdf> .	
+@prefix rda: <http://rdaregistry.info/termList/ModeIssue> .
+@prefix foaf: <http://xmlns.com/foaf/0.1>.
+@prefix ex: <http://example.org>.
+@prefix ex: <http://example.org/vocab#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:Book a rdfs:Class ;
+    rdfs:label "Book" ; .
+
+ex:Person a rdfs:Class ;
+    rdfs:label "Person" ; .
+
+ex:hasAuthor a rdf:Property ;
+    rdfs:label "hasAuthor" ;
+    rdfs:domain ex:Book ;
+    rdfs:range ex:Person .
+
+ex:EBook a rdfs:Class ;
+    rdfs:label "EBook" ;
+    rdfs:subClassOf ex:Book .

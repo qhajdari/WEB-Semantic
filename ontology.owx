@@ -102,6 +102,133 @@
         <NamedIndividual IRI="Vegetarian"/>
     </ObjectPropertyAssertion>
 
+        <!-- VegetableSalad Object Property Assertions -->
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasIngredient"/>
+        <NamedIndividual IRI="VegetableSalad"/>
+        <NamedIndividual IRI="Lettuce"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasIngredient"/>
+        <NamedIndividual IRI="VegetableSalad"/>
+        <NamedIndividual IRI="Tomato"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasIngredient"/>
+        <NamedIndividual IRI="VegetableSalad"/>
+        <NamedIndividual IRI="OliveOil"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="belongsToCategory"/>
+        <NamedIndividual IRI="VegetableSalad"/>
+        <NamedIndividual IRI="Vegetarian"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="belongsToCuisine"/>
+        <NamedIndividual IRI="VegetableSalad"/>
+        <NamedIndividual IRI="MediterraneanCuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isPreparedBy"/>
+        <NamedIndividual IRI="VegetableSalad"/>
+        <NamedIndividual IRI="ChefGordon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="requiresCookingMethod"/>
+        <NamedIndividual IRI="VegetableSalad"/>
+        <NamedIndividual IRI="Boiling"/>
+    </ObjectPropertyAssertion>
+
+    <!-- VegetableSalad Data Property Assertions -->
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="VegetableSalad"/>
+        <Literal datatypeIRI="xsd:string">Vegetable Salad</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="preparationTime"/>
+        <NamedIndividual IRI="VegetableSalad"/>
+        <Literal datatypeIRI="xsd:integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="cookingTime"/>
+        <NamedIndividual IRI="VegetableSalad"/>
+        <Literal datatypeIRI="xsd:integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasCalories"/>
+        <NamedIndividual IRI="VegetableSalad"/>
+        <Literal datatypeIRI="xsd:integer">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasDescription"/>
+        <NamedIndividual IRI="VegetableSalad"/>
+        <Literal datatypeIRI="xsd:string">A light and fresh salad with Mediterranean flavors.</Literal>
+    </DataPropertyAssertion>
+
+    <!-- ItalianCuisine Object Property Assertions -->
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="belongsToCuisine"/>
+        <NamedIndividual IRI="SpaghettiTomatoSauce"/>
+        <NamedIndividual IRI="ItalianCuisine"/>
+    </ObjectPropertyAssertion>
+
+    <!-- ItalianCuisine Data Property Assertions -->
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="ItalianCuisine"/>
+        <Literal datatypeIRI="xsd:string">Italian Cuisine</Literal>
+    </DataPropertyAssertion>
+
+    <!-- ChefGordon Data Property Assertions -->
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="ChefGordon"/>
+        <Literal datatypeIRI="xsd:string">Chef Gordon</Literal>
+    </DataPropertyAssertion>
+
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="Boiling"/>
+        <Literal datatypeIRI="xsd:string">Boiling</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="Grilling"/>
+        <Literal datatypeIRI="xsd:string">Grilling</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="Tomato"/>
+        <Literal datatypeIRI="xsd:string">Tomato</Literal>
+    </DataPropertyAssertion>    
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="Lettuce"/>
+        <Literal datatypeIRI="xsd:string">Lettuce</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="MediterraneanCuisine"/>
+        <Literal datatypeIRI="xsd:string">MediterraneanCuisine</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="NonVegetarian"/>
+        <Literal datatypeIRI="xsd:string">NonVegetarian</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="Vegetarian"/>
+        <Literal datatypeIRI="xsd:string">Vegetarian</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="OliveOil"/>
+        <Literal datatypeIRI="xsd:string">OliveOil</Literal>
+    </DataPropertyAssertion>
+
+
     <!-- hasIngredient -->
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasIngredient"/>

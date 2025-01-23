@@ -48,7 +48,7 @@
           :belongsToCategory :NonVegetarian ;
           :belongsToCuisine :American ;
           :preparationTime "20"^^xsd:integer ;
-          :cookingTime "60"^^xsd:integer .
+          :cookingTime "60"^^xsd:integer ;
           :isPreparedBy :ChefGordon .
 
 # Recipe: Pancakes
@@ -193,7 +193,7 @@
 
 # Chefs
 :ChefGordon rdf:type :Chef ;
-            rdfs:label "Chef Gordon" .
+            rdfs:label "ChefGordon" .
 
 :ChefDiet rdf:type :Chef ;
           rdfs:label "Chef Diet" .
